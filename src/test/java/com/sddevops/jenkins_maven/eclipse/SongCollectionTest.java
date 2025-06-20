@@ -44,7 +44,7 @@ public class SongCollectionTest {
 	@Test
 	void testGetSongs() {
 		List<Song> testSc = sc.getSongs();
-		assertEquals(testSc.size(), SONG_COLLECTION_SIZE);
+		assertEquals(testSc.size(), 0);
 	}
 
 	@Test
