@@ -1,8 +1,8 @@
 pipeline {
 	agent any
 	tools {
-	maven 'maven'
-	jdk 'Java JDK 17'
+		maven 'maven'
+		jdk 'Java JDK 17'
 	}
 	stages{
         stage("clean"){
@@ -22,6 +22,12 @@ pipeline {
                 echo "Start build"
                 bat "mvn install -DskipTests"
             }
+        }
+        stage("scan"){
+        	steps {
+        		echo "Start scan"
+        		bat "mvn scan"
+        	}
         }
     }
 }
