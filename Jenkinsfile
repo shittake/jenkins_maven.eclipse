@@ -26,7 +26,7 @@ pipeline {
         stage("scan"){
         	steps {
         		echo "Start scan"
-        		bat "mvn scan"
+        		bat "mvn sonar:sonar"
         	}
         }
     }
